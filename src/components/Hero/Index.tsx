@@ -1,5 +1,5 @@
 import HeroTitle from './HeroTitle';
-import heroImage from '../assets/images/hero.png';
+import heroImage from '../../assets/images/hero.png';
 import Navbar from './Navbar';
 
 export default function Hero() {

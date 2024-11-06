@@ -10,6 +10,8 @@ type CardProps = {
   bathrooms: number;
   area: number;
   type: 'Venda' | 'Aluguel';
+  category: 'Casa' | 'Apartamento' | 'Terreno' | 'Chácara';
+  city: 'Sorocaba' | 'Votorantim' | 'Piedade'
   imageUrl: string;
 };
 

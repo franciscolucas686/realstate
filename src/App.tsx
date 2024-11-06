@@ -1,7 +1,7 @@
-import CardList from './components/CardList';
+import CardList from './components/Properties/CardList';
 import Footer from './components/Footer';
 import Hero from './components/Hero/Index';
-import Sidebar from './components/Sidebar';
+import Sidebar from './components/Properties/Sidebar';
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
         <Sidebar />
         <CardList />
       </div>
-        <Footer />
+      <Footer />
     </>
   );
 }

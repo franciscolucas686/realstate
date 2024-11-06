@@ -15,18 +15,36 @@ type SocialLinksProps = {
 
 const ContactInfo = ({ whatsapp1, whatsapp2, email }: ContactInfoProps) => (
   <div className='flex justify-center gap-4'>
-    <div className='flex items-center gap-1'>
-        <MdPhoneInTalk className='text-xl text-customYellow' />
+    <a
+      className='flex items-center gap-1'
+      href='#'
+      aria-label='Whatsapp 1'
+      title='Whatsapp 1'
+      target='_blank'
+    >
+      <MdPhoneInTalk className='text-xl text-customYellow' />
       <span>{whatsapp1}</span>
-    </div>
-    <div className='flex items-center gap-1'>
-        <RiWhatsappFill className='text-xl text-customYellow' />
+    </a>
+    <a
+      className='flex items-center gap-1'
+      href='#'
+      aria-label='Whatsapp 2'
+      title='Whatsapp 2'
+      target='_blank'
+    >
+      <RiWhatsappFill className='text-xl text-customYellow' />
       <span>{whatsapp2}</span>
-    </div>
-    <div className='flex items-center gap-1'>
-        <MdEmail className='text-xl text-customYellow' />
+    </a>
+    <a
+      className='flex items-center gap-1'
+      href='#'
+      aria-label='Email'
+      title='Email'
+      target='_blank'
+    >
+      <MdEmail className='text-xl text-customYellow' />
       <span>{email}</span>
-    </div>
+    </a>
   </div>
 );
 
@@ -35,6 +53,7 @@ const SocialLinks = ({ facebook, instagram }: SocialLinksProps) => (
     <a
       href={facebook}
       aria-label='Facebook'
+      title='Facebook'
       target='_blank'
       rel='noopener noreferrer'
     >
@@ -43,6 +62,7 @@ const SocialLinks = ({ facebook, instagram }: SocialLinksProps) => (
     <a
       href={instagram}
       aria-label='Instagram'
+      title='Instagram'
       target='_blank'
       rel='noopener noreferrer'
     >
@@ -61,7 +81,7 @@ export default function Footer() {
       />
       <h2 className='text-lg font-bold mb-4'>Contato</h2>
       <ContactInfo
-        whatsapp1='(15) 99-3333'
+        whatsapp1='(15) 99999-3333'
         whatsapp2='(15) 99999-9999'
         email='exemplo@cvimobiliaria.com'
       />

@@ -1,5 +1,5 @@
 import Card from './Card';
-import img01 from '../assets/images/ap_res_primavera/img01.jpeg';
+import img01 from '../../assets/images/ap_res_primavera/img01.jpeg';
 
 const properties = [
   {
@@ -11,6 +11,8 @@ const properties = [
     bathrooms: 1,
     area: 78,
     type: 'Venda',
+    category: 'Casa',
+    city: 'Votorantim',
     imageUrl: img01,
   },
   {
@@ -22,6 +24,8 @@ const properties = [
     bathrooms: 1,
     area: 78,
     type: 'Venda',
+    category: 'Apartamento',
+    city: 'Piedade',
     imageUrl: img01,
   },
   {
@@ -33,6 +37,8 @@ const properties = [
     bathrooms: 1,
     area: 78,
     type: 'Venda',
+    category: 'Apartamento',
+    city: 'Votorantim',
     imageUrl: img01,
   },
   {
@@ -44,6 +50,8 @@ const properties = [
     bathrooms: 1,
     area: 78,
     type: 'Venda',
+    category: 'Apartamento',
+    city: 'Piedade',
     imageUrl: img01,
   },
   {
@@ -55,6 +63,8 @@ const properties = [
     bathrooms: 1,
     area: 78,
     type: 'Venda',
+    category: 'Casa',
+    city: 'Votorantim',
     imageUrl: img01,
   },
   {
@@ -66,6 +76,8 @@ const properties = [
     bathrooms: 1,
     area: 78,
     type: 'Venda',
+    category: 'Apartamento',
+    city: 'Votorantim',
     imageUrl: img01,
   },
   {
@@ -77,6 +89,8 @@ const properties = [
     bathrooms: 1,
     area: 78,
     type: 'Aluguel',
+    category: 'Apartamento',
+    city: 'Votorantim',
     imageUrl: img01,
   },
   {
@@ -88,6 +102,8 @@ const properties = [
     bathrooms: 1,
     area: 78,
     type: 'Aluguel',
+    category: 'Apartamento',
+    city: 'Piedade',
     imageUrl: img01,
   },
   {
@@ -99,6 +115,8 @@ const properties = [
     bathrooms: 1,
     area: 78,
     type: 'Aluguel',
+    category: 'Apartamento',
+    city: 'Votorantim',
     imageUrl: img01,
   },
   {
@@ -110,6 +128,8 @@ const properties = [
     bathrooms: 1,
     area: 78,
     type: 'Aluguel',
+    category: 'Apartamento',
+    city: 'Votorantim',
     imageUrl: img01,
   },
 ] as const;

@@ -1,21 +1,21 @@
 import { FaBath, FaBed } from 'react-icons/fa';
 import { RxRulerSquare } from 'react-icons/rx';
 
-type CardProps = {
+export interface Property {
   id: string;
   title: string;
-  address: string;
+  type: 'Venda' | 'Aluguel';
+  category: 'Casa' | 'Apartamento' | 'Terreno' | 'Chácara';
+  city: 'Sorocaba' | 'Votorantim' | 'Piedade';
   price: string;
+  address: string;
   bedrooms: number;
   bathrooms: number;
   area: number;
-  type: 'Venda' | 'Aluguel';
-  category: 'Casa' | 'Apartamento' | 'Terreno' | 'Chácara';
-  city: 'Sorocaba' | 'Votorantim' | 'Piedade'
   imageUrl: string;
-};
+}
 
-export default function Card({
+export default function PropertyCard({
   id,
   title,
   address,
@@ -25,7 +25,7 @@ export default function Card({
   area,
   type,
   imageUrl,
-}: CardProps) {
+}: Property) {
   return (
     <div className='border rounded-lg shadow-lg overflow-hidden bg-white relative'>
       <img
@@ -49,7 +49,7 @@ export default function Card({
         <p className='text-gray-600 text-sm'>{address}</p>
         <p className='mt-2 text-customBrown font-semibold'>{price}</p>
         <div className='flex items-center mt-2 text-gray-600 space-x-4'>
-          <span className='flex items-baseline'>
+          <span title='Quartos' className='flex items-baseline'>
             <FaBed className='inline w-5 h-5 mr-2' />
             <span> {bedrooms}</span>
           </span>

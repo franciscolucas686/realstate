@@ -1,7 +1,7 @@
-import Card from './Card';
 import img01 from '../../assets/images/ap_res_primavera/img01.jpeg';
+import { Property } from './PropertyCard';
 
-const properties = [
+const properties: Property[] = [
   {
     id: '01',
     title: 'Ap Residencial Primavera',
@@ -94,7 +94,7 @@ const properties = [
     imageUrl: img01,
   },
   {
-    id: '07',
+    id: '08',
     title: 'Ap Residencial Primavera',
     address: 'Rua Benedito Estalislau, n°205 bairro Santa Rosália',
     price: 'R$ 240.000,00',
@@ -107,7 +107,7 @@ const properties = [
     imageUrl: img01,
   },
   {
-    id: '07',
+    id: '09',
     title: 'Ap Residencial Primavera',
     address: 'Rua Benedito Estalislau, n°205 bairro Santa Rosália',
     price: 'R$ 240.000,00',
@@ -120,7 +120,7 @@ const properties = [
     imageUrl: img01,
   },
   {
-    id: '07',
+    id: '10',
     title: 'Ap Residencial Primavera',
     address: 'Rua Benedito Estalislau, n°205 bairro Santa Rosália',
     price: 'R$ 240.000,00',
@@ -134,12 +134,4 @@ const properties = [
   },
 ] as const;
 
-export default function CardList() {
-  return (
-    <main className='grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-10'>
-      {properties.map((property, index) => (
-        <Card key={index} {...property} />
-      ))}
-    </main>
-  );
-}
+export default properties

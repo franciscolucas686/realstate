@@ -189,7 +189,7 @@ export default function PropertiesList() {
           <div className='mt-5'>
             <button
               onClick={clearFilters}
-              className='w-full p-2 bg-customGreen text-white rounded-md hover:bg-green-950 transition'
+              className='w-full p-2 bg-customGreen text-white rounded-full hover:bg-green-950 transition'
             >
               Limpar Filtros
             </button>

@@ -14,7 +14,7 @@ type SocialLinksProps = {
 };
 
 const ContactInfo = ({ whatsapp1, whatsapp2, email }: ContactInfoProps) => (
-  <div className='flex justify-center gap-4'>
+  <div className='flex justify-center gap-4 mb'>
     <a
       className='flex items-center gap-1'
       href='#'
@@ -49,7 +49,7 @@ const ContactInfo = ({ whatsapp1, whatsapp2, email }: ContactInfoProps) => (
 );
 
 const SocialLinks = ({ facebook, instagram }: SocialLinksProps) => (
-  <div className='flex justify-center gap-4 mb-4'>
+  <div className='flex justify-center gap-4 mb-10'>
     <a
       href={facebook}
       aria-label='Facebook'
@@ -73,19 +73,19 @@ const SocialLinks = ({ facebook, instagram }: SocialLinksProps) => (
 
 export default function Footer() {
   return (
-    <footer className=' text-white py-8 text-center bg-customGreen'>
-      <h2 className='text-lg font-bold mb-4'>Redes Sociais</h2>
+    <footer className='h-[400px] flex flex-col justify-center text-white text-center bg-customGreen'>
+      <h2 className='text-3xl font-bold mb-10'>Redes Sociais</h2>
       <SocialLinks
         facebook='https://www.facebook.com'
         instagram='https://www.instagram.com'
       />
-      <h2 className='text-lg font-bold mb-4'>Contato</h2>
+      <h2 className='text-3xl font-bold mb-10'>Contato</h2>
       <ContactInfo
         whatsapp1='(15) 99999-3333'
         whatsapp2='(15) 99999-9999'
         email='exemplo@cvimobiliaria.com'
       />
-      <p className='text-sm text-gray-400 mt-8'>
+      <p className='text-sm text-gray-400 mt-10'>
         &reg;CV Negócios Imobiliários 2024 - Todos os direitos Reservados
       </p>
     </footer>

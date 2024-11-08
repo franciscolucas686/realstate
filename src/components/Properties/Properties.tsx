@@ -1,5 +1,18 @@
 import img01 from '../../assets/images/ap_res_primavera/img01.jpeg';
-import { Property } from './PropertyCard';
+
+export interface Property {
+  id: string;
+  title: string;
+  type: 'Venda' | 'Aluguel';
+  category: 'Casa' | 'Apartamento' | 'Terreno' | 'Chácara';
+  city: 'Sorocaba' | 'Votorantim' | 'Piedade';
+  price: string;
+  address: string;
+  bedrooms: number;
+  bathrooms: number;
+  area: number;
+  imageUrl: string;
+}
 
 const properties: Property[] = [
   {
@@ -124,12 +137,12 @@ const properties: Property[] = [
     title: 'Ap Residencial Primavera',
     address: 'Rua Benedito Estalislau, n°205 bairro Santa Rosália',
     price: 'R$ 240.000,00',
-    bedrooms: 3,
+    bedrooms: 1,
     bathrooms: 1,
     area: 78,
     type: 'Aluguel',
     category: 'Apartamento',
-    city: 'Votorantim',
+    city: 'Sorocaba',
     imageUrl: img01,
   },
 ] as const;

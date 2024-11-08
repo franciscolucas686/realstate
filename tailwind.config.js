@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 export default {
   content: [
     "./index.html",
@@ -21,6 +22,7 @@ export default {
         customGreen: '#1F4B43',
         customYellow: '#E7C873',
         customBrown: '#493927',
+
       },
     },
   },

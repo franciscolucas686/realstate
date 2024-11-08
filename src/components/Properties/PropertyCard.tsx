@@ -1,19 +1,6 @@
 import { FaBath, FaBed } from 'react-icons/fa';
 import { RxRulerSquare } from 'react-icons/rx';
-
-export interface Property {
-  id: string;
-  title: string;
-  type: 'Venda' | 'Aluguel';
-  category: 'Casa' | 'Apartamento' | 'Terreno' | 'Chácara';
-  city: 'Sorocaba' | 'Votorantim' | 'Piedade';
-  price: string;
-  address: string;
-  bedrooms: number;
-  bathrooms: number;
-  area: number;
-  imageUrl: string;
-}
+import { Property } from './Properties';
 
 export default function PropertyCard({
   id,
@@ -45,7 +32,7 @@ export default function PropertyCard({
             {type}
           </span>
         </div>
-        <h3 className='text-lg font-bold'>{title}</h3>
+        <h3 className='text-lg font-bold text-customBrown'>{title}</h3>
         <p className='text-gray-600 text-sm'>{address}</p>
         <p className='mt-2 text-customBrown font-semibold'>{price}</p>
         <div className='flex items-center mt-2 text-gray-600 space-x-4'>

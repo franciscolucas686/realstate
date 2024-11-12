@@ -1,6 +1,6 @@
 import { FaFacebookSquare } from 'react-icons/fa';
 import { RiInstagramFill, RiWhatsappFill } from 'react-icons/ri';
-import { MdEmail, MdPhoneInTalk } from 'react-icons/md';
+import { MdEmail } from 'react-icons/md';
 
 type ContactInfoProps = {
   whatsapp1: string;
@@ -21,8 +21,9 @@ const ContactInfo = ({ whatsapp1, whatsapp2, email }: ContactInfoProps) => (
       aria-label='Whatsapp 1'
       title='Whatsapp 1'
       target='_blank'
+      rel='noopener noreferrer'
     >
-      <MdPhoneInTalk className='text-xl text-customYellow' />
+      <RiWhatsappFill className='text-xl text-customYellow' />
       <span>{whatsapp1}</span>
     </a>
     <a
@@ -31,6 +32,7 @@ const ContactInfo = ({ whatsapp1, whatsapp2, email }: ContactInfoProps) => (
       aria-label='Whatsapp 2'
       title='Whatsapp 2'
       target='_blank'
+      rel='noopener noreferrer'
     >
       <RiWhatsappFill className='text-xl text-customYellow' />
       <span>{whatsapp2}</span>
@@ -41,6 +43,7 @@ const ContactInfo = ({ whatsapp1, whatsapp2, email }: ContactInfoProps) => (
       aria-label='Email'
       title='Email'
       target='_blank'
+      rel='noopener noreferrer'
     >
       <MdEmail className='text-xl text-customYellow' />
       <span>{email}</span>
@@ -73,21 +76,24 @@ const SocialLinks = ({ facebook, instagram }: SocialLinksProps) => (
 
 export default function Footer() {
   return (
-    <footer className='h-[400px] flex flex-col justify-center text-white text-center bg-customGreen'>
-      <h2 className='text-3xl font-bold mb-10'>Redes Sociais</h2>
-      <SocialLinks
-        facebook='https://www.facebook.com'
-        instagram='https://www.instagram.com'
-      />
-      <h2 className='text-3xl font-bold mb-10'>Contato</h2>
-      <ContactInfo
-        whatsapp1='(15) 99999-3333'
-        whatsapp2='(15) 99999-9999'
-        email='exemplo@cvimobiliaria.com'
-      />
-      <p className='text-sm text-gray-400 mt-10'>
-        &reg;CV Negócios Imobiliários 2024 - Todos os direitos Reservados
-      </p>
+    <footer>
+      <div className='py-10 flex flex-col justify-center text-white text-center bg-customGreen'>
+        <h2 className='text-2xl mb-3'>Redes Sociais</h2>
+        <SocialLinks
+          facebook='https://www.facebook.com'
+          instagram='https://www.instagram.com'
+        />
+        <ContactInfo
+          whatsapp1='(15) 99999-3333'
+          whatsapp2='(15) 99999-9999'
+          email='exemplo@cvimobiliaria.com'
+        />
+      </div>
+      <div className='text-center'>
+        <p className='text-sm text-gray-400 bg-customGreen pb-10'>
+          &reg;CV Negócios Imobiliários 2024 - Todos os direitos Reservados
+        </p>
+      </div>
     </footer>
   );
 }

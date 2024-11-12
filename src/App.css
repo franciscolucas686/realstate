@@ -7,22 +7,35 @@ body {
   background-color:#f3f4f6;
 }
 
-.customRangeInput {
-    @apply w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer;
 
-    /* Estilização do polegar para navegadores baseados em WebKit (Chrome, Safari) */
+  .range-base {
+      @apply w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer;
 
-    &::-webkit-slider-thumb {
-      @apply h-4 w-4 rounded-full bg-customGreen appearance-none;
-    }
+      &::-webkit-slider-thumb {
+        @apply h-4 w-4 rounded-full bg-customGreen appearance-none;
+      }
 
-    /* Estilização do polegar para Firefox */
-    &::-moz-range-thumb {
-      @apply h-4 w-4 rounded-full bg-customGreen appearance-none;
-    }
+      &::-moz-range-thumb {
+        @apply h-4 w-4 rounded-full bg-customGreen appearance-none;
+      }
 
-    /* Estilização do polegar para navegadores baseados em Edge */
-    &::-ms-thumb {
-      @apply h-4 w-4 rounded-full bg-customGreen appearance-none;
-    }
+      &::-ms-thumb {
+        @apply h-4 w-4 rounded-full bg-customGreen appearance-none;
+      }
+  }
+
+.input-base {
+  @apply mt-3 block w-full p-1 pl-4 border border-gray-300 rounded-full focus:outline-none;
+}
+
+.label-base {
+  @apply block text-lg font-semibold text-customBrown;
+}
+
+.select-base {
+  @apply mt-3 block w-full p-2 border border-gray-300 rounded-full focus:outline-none;
+}
+
+.button-clear {
+  @apply w-full p-2 bg-customGreen text-white rounded-full hover:bg-green-950 transition;
 }

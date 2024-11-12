@@ -6,18 +6,14 @@ export default function PropertiesList() {
   const [codeFilter, setCodeFilter] = useState('');
   const [typeFilter, setTypeFilter] = useState<'Venda' | 'Aluguel' | ''>('');
   const [categoryFilter, setCategoryFilter] = useState<string[]>([]);
-  const [cityFilter, setCityFilter] = useState<
-    'Sorocaba' | 'Votorantim' | 'Piedade' | ''
-  >('');
+  const [cityFilter, setCityFilter] = useState<'Sorocaba' | 'Votorantim' | 'Piedade' | ''>('');
   const [priceFilter, setPriceFilter] = useState(0);
   const [bedroomsFilter, setBedroomsFilter] = useState(0);
   const [bathroomsFilter, setBathroomsFilter] = useState(0);
 
   const handleCategoryChange = (category: string) => {
     setCategoryFilter(prev =>
-      prev.includes(category)
-        ? prev.filter(cat => cat !== category)
-        : [...prev, category],
+      prev.includes(category) ? prev.filter(cat => cat !== category) : [...prev, category],
     );
   };
 
@@ -35,12 +31,9 @@ export default function PropertiesList() {
     return (
       (codeFilter === '' || property.id.includes(codeFilter)) &&
       (typeFilter === '' || property.type === typeFilter) &&
-      (categoryFilter.length === 0 ||
-        categoryFilter.includes(property.category)) &&
+      (categoryFilter.length === 0 || categoryFilter.includes(property.category)) &&
       (cityFilter === '' || property.city === cityFilter) &&
-      (priceFilter === 0 ||
-        parseFloat(property.price.replace(/[^\d,]/g, '').replace(',', '.')) <=
-          priceFilter) &&
+      (priceFilter === 0 || parseFloat(property.price.replace(/[^\d,]/g, '').replace(',', '.')) <= priceFilter) &&
       (bedroomsFilter === 0 || property.bedrooms >= bedroomsFilter) &&
       (bathroomsFilter === 0 || property.bathrooms >= bathroomsFilter)
     );
@@ -51,23 +44,20 @@ export default function PropertiesList() {
       <div className='h-full'>
         <div className='p-5 bg-white shadow-lg rounded-lg'>
           <div className='mb-9'>
-            <label
-              htmlFor='code'
-              className='block text-lg font-semibold text-customBrown'
-            >
+            <label htmlFor='code' className='label-base'>
               Código
             </label>
             <input
               type='text'
               id='code'
-              className='mt-3 block w-full p-1 pl-4 border border-gray-300 rounded-full'
+              className='input-base'
               value={codeFilter}
               onChange={e => setCodeFilter(e.target.value)}
             />
           </div>
 
           <div className='mb-9'>
-            <label className='block text-lg font-semibold text-customBrown'>
+            <label className='label-base'>
               Tipo
             </label>
             <div className='mt-3'>
@@ -97,7 +87,7 @@ export default function PropertiesList() {
           </div>
 
           <div className='mb-9'>
-            <label className='block text-lg font-semibold text-customBrown'>
+            <label className='label-base'>
               Categoria
             </label>
             <div className='mt-3 flex flex-col'>
@@ -116,21 +106,14 @@ export default function PropertiesList() {
           </div>
 
           <div className='mb-9'>
-            <label
-              htmlFor='city'
-              className='block text-lg font-semibold text-customBrown'
-            >
+            <label htmlFor='city' className='label-base'>
               Cidade
             </label>
             <select
               id='city'
-              className='mt-3 block w-full p-2 border border-gray-300 rounded-full'
+              className='select-base'
               value={cityFilter}
-              onChange={e =>
-                setCityFilter(
-                  e.target.value as 'Sorocaba' | 'Votorantim' | 'Piedade' | '',
-                )
-              }
+              onChange={e => setCityFilter(e.target.value as 'Sorocaba' | 'Votorantim' | 'Piedade' | '')}
             >
               <option value=''>Selecione...</option>
               <option value='Sorocaba'>Sorocaba</option>
@@ -140,7 +123,7 @@ export default function PropertiesList() {
           </div>
 
           <div className='mb-4'>
-            <label className='block text-lg font-semibold text-customBrown'>
+            <label className='label-base'>
               Preço até
             </label>
             <input
@@ -148,7 +131,7 @@ export default function PropertiesList() {
               min='0'
               max='1000000'
               step='10000'
-              className='customRangeInput'
+              className='range-base'
               value={priceFilter}
               onChange={e => setPriceFilter(parseInt(e.target.value))}
             />
@@ -156,7 +139,7 @@ export default function PropertiesList() {
           </div>
 
           <div className='mb-4'>
-            <label className='block text-lg font-semibold text-customBrown'>
+            <label className='label-base'>
               Quartos
             </label>
             <input
@@ -164,7 +147,7 @@ export default function PropertiesList() {
               min='0'
               max='10'
               step='1'
-              className='customRangeInput'
+              className='range-base'
               value={bedroomsFilter}
               onChange={e => setBedroomsFilter(parseInt(e.target.value))}
             />
@@ -172,7 +155,7 @@ export default function PropertiesList() {
           </div>
 
           <div className='mb-4'>
-            <label className='block text-lg font-semibold text-customBrown'>
+            <label className='label-base'>
               Banheiros
             </label>
             <input
@@ -180,16 +163,17 @@ export default function PropertiesList() {
               min='0'
               max='10'
               step='1'
-              className='customRangeInput'
+              className='range-base'
               value={bathroomsFilter}
               onChange={e => setBathroomsFilter(parseInt(e.target.value))}
             />
             <p>{bathroomsFilter}</p>
           </div>
+
           <div className='mt-5'>
             <button
               onClick={clearFilters}
-              className='w-full p-2 bg-customGreen text-white rounded-full hover:bg-green-950 transition'
+              className='button-clear'
             >
               Limpar Filtros
             </button>
@@ -197,7 +181,7 @@ export default function PropertiesList() {
         </div>
       </div>
 
-      <main className='grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-10'>
+      <main className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
         {filteredProperties.map((property, index) => (
           <PropertyCard key={index} {...property} />
         ))}

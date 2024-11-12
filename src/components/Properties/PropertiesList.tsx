@@ -50,7 +50,7 @@ export default function PropertiesList() {
     <div className='container min-h-screen my-20 gap-20 bg-gray-100 grid grid-cols-[256px_1fr] items-start justify-center'>
       <div className='h-full'>
         <div className='p-5 bg-white shadow-lg rounded-lg'>
-          <div className='mb-5'>
+          <div className='mb-9'>
             <label
               htmlFor='code'
               className='block text-lg font-semibold text-customBrown'
@@ -60,17 +60,17 @@ export default function PropertiesList() {
             <input
               type='text'
               id='code'
-              className='mt-1 block w-full p-1 pl-4 border border-gray-300 rounded-full'
+              className='mt-3 block w-full p-1 pl-4 border border-gray-300 rounded-full'
               value={codeFilter}
               onChange={e => setCodeFilter(e.target.value)}
             />
           </div>
 
-          <div className='mb-5'>
+          <div className='mb-9'>
             <label className='block text-lg font-semibold text-customBrown'>
               Tipo
             </label>
-            <div className='mt-1'>
+            <div className='mt-3'>
               <label className='inline-flex items-center accent-customGreen'>
                 <input
                   type='radio'
@@ -96,11 +96,11 @@ export default function PropertiesList() {
             </div>
           </div>
 
-          <div className='mb-5'>
+          <div className='mb-9'>
             <label className='block text-lg font-semibold text-customBrown'>
               Categoria
             </label>
-            <div className='mt-1 flex flex-col'>
+            <div className='mt-3 flex flex-col'>
               {['Apartamento', 'Casa', 'Chácara', 'Terreno'].map(category => (
                 <label key={category} className='inline-flex items-center'>
                   <input
@@ -115,7 +115,7 @@ export default function PropertiesList() {
             </div>
           </div>
 
-          <div className='mb-5'>
+          <div className='mb-9'>
             <label
               htmlFor='city'
               className='block text-lg font-semibold text-customBrown'
@@ -124,7 +124,7 @@ export default function PropertiesList() {
             </label>
             <select
               id='city'
-              className='mt-1 block w-full p-2 border border-gray-300 rounded-full'
+              className='mt-3 block w-full p-2 border border-gray-300 rounded-full'
               value={cityFilter}
               onChange={e =>
                 setCityFilter(

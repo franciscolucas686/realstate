@@ -71,7 +71,7 @@ export default function PropertiesList() {
               Tipo
             </label>
             <div className='mt-1'>
-              <label className='inline-flex items-center'>
+              <label className='inline-flex items-center accent-customGreen'>
                 <input
                   type='radio'
                   name='type'
@@ -82,7 +82,7 @@ export default function PropertiesList() {
                 />
                 <span className='ml-2'>Venda</span>
               </label>
-              <label className='inline-flex items-center ml-4'>
+              <label className='inline-flex items-center ml-4 accent-customGreen'>
                 <input
                   type='radio'
                   name='type'
@@ -105,7 +105,7 @@ export default function PropertiesList() {
                 <label key={category} className='inline-flex items-center'>
                   <input
                     type='checkbox'
-                    className='form-checkbox'
+                    className='form-checkbox accent-customGreen'
                     checked={categoryFilter.includes(category)}
                     onChange={() => handleCategoryChange(category)}
                   />
@@ -148,7 +148,7 @@ export default function PropertiesList() {
               min='0'
               max='1000000'
               step='10000'
-              className='w-full'
+              className='customRangeInput'
               value={priceFilter}
               onChange={e => setPriceFilter(parseInt(e.target.value))}
             />
@@ -164,7 +164,7 @@ export default function PropertiesList() {
               min='0'
               max='10'
               step='1'
-              className='w-full'
+              className='customRangeInput'
               value={bedroomsFilter}
               onChange={e => setBedroomsFilter(parseInt(e.target.value))}
             />
@@ -180,7 +180,7 @@ export default function PropertiesList() {
               min='0'
               max='10'
               step='1'
-              className='w-full'
+              className='customRangeInput'
               value={bathroomsFilter}
               onChange={e => setBathroomsFilter(parseInt(e.target.value))}
             />

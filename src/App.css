@@ -6,3 +6,23 @@ body {
   font-family: 'Roboto', sans-serif;
   background-color:#f3f4f6;
 }
+
+.customRangeInput {
+    @apply w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer;
+
+    /* Estilização do polegar para navegadores baseados em WebKit (Chrome, Safari) */
+
+    &::-webkit-slider-thumb {
+      @apply h-4 w-4 rounded-full bg-customGreen appearance-none;
+    }
+
+    /* Estilização do polegar para Firefox */
+    &::-moz-range-thumb {
+      @apply h-4 w-4 rounded-full bg-customGreen appearance-none;
+    }
+
+    /* Estilização do polegar para navegadores baseados em Edge */
+    &::-ms-thumb {
+      @apply h-4 w-4 rounded-full bg-customGreen appearance-none;
+    }
+}
